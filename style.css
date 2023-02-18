@@ -1,53 +1,15 @@
-.bg-random-1:hover {
-  background-color: #F87171;
-}
-
-.bg-random-2:hover {
-  background-color: #FBBF24;
-}
-
-.bg-random-3:hover {
-  background-color: #34D399;
-}
-
-.bg-random-4:hover {
-  background-color: #60A5FA;
-}
-
-.bg-random-5:hover {
-  background-color: #A78BFA;
-}
-.bg-random-6:hover {
-  background-color: green;
-}
-
-.bg-random-7:hover {
-  background-color: orange;
-}
-
-.bg-random-8:hover {
-  background-color: purple;
-}
-
-.bg-random-9:hover {
-  background-color: lime;
-}
-
-.bg-random-10:hover {
-  background-color: violet;
-}
 
 .calculate{
-  width: 25%;
-  height: 400px;
+  width: 45%;
+  height: 100vh;
 }
 @media (max-width: 768px) {
-.section {
-flex-direction: column;
-align-items: center;
-}
-.calculate{
-  margin-top: 20px;
-width: 100%;
-}
+  .section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .calculate{
+    margin-top: 20px;
+    width: 100%;
+  }
 }

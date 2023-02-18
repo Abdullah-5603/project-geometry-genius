@@ -27,135 +27,58 @@
             <div class="grid sm:grid-cols-3 grid-cols-1 gap-4 mx-auto">
                 <div class="card border-gray-200 border-4 rounded-md p-5 text-center">
                     <img src="./images/triangle.png" alt="">
-                    <p class="text-2xl text-center font-bold my-2">Triangle</p>
+                    <p class="text-xl text-center font-bold my-2" id="triangle-title">Triangle</p>
                     <p>Area (A) = 0.5 x b x h</p>
                     <p class="my-2"><input type="text" placeholder="b" class="px-2 bg-gray-200 w-3/12 rounded-md" id="triangle-b"> cm <input type="text" placeholder="c" class="px-3 bg-gray-200 rounded-md w-3/12" id="triangle-h"> cm</p>
                     <button class="py-2 px-10 my-3 bg-cyan-600 text-white rounded-md" id="triangle-calculate-btn">Calculate</button>
-                </div>
-                                     
+                </div>             
                 <div class="card border-gray-200 border-4 rounded-md p-5 text-center">
                     <img src="./images/rectangle.png" alt="">
-                    <p class="text-2xl text-center font-bold my-2">Rectangle</p>
+                    <p class="text-xl text-center font-bold my-2" id="rectangle-title">Rectangle</p>
                     <p>Area (A) = w x l</p>
                     <p class="my-2"><input type="text" placeholder="w" class="px-2 bg-gray-200 w-3/12 rounded-md" id="rectangle-w"> cm <input type="text" placeholder="l" class="px-3 bg-gray-200 rounded-md w-3/12" id="rectangle-l"> cm</p>
                     <button class="py-2 px-10 my-3 bg-cyan-600 text-white rounded-md" id="rectangle-calculate-btn">Calculate</button>
                 </div>
                 <div class=" card border-gray-200 border-4 rounded-md p-5 text-center">
                     <img src="./images/parallelogram.png" alt="">
-                    <p class="text-2xl text-center font-bold my-2">Perallelogram</p>
+                    <p class="text-2xl text-center font-bold my-2" id="perallelogram-title">Perallelogram</p>
                     <p>Area (A) = b x h</p>
                     <p class="my-2"><input type="text" placeholder="b" class="px-2 bg-gray-200 w-3/12 rounded-md" id="perallelogram-b"> cm <input type="text" placeholder="h" class="px-3 bg-gray-200 rounded-md w-3/12" id="perallelogram-h"> cm</p>
                     <button class="py-2 px-10 my-3 bg-cyan-600 text-white rounded-md" id="perallelogram-calculate-btn">Calculate</button>
                 </div>
                 <div class="card border-gray-200 border-4 rounded-md p-5 text-center">
                     <img src="./images/rhombus.png" alt="">
-                    <p class="text-2xl text-center font-bold my-2">Rhombus</p>
+                    <p class="text-2xl text-center font-bold my-2" id="rhombus-title">Rhombus</p>
                     <p>Area (A) = 0.5 x d<sub>1</sub> x d <sub>1</sub> </p>
                     <p class="my-2"><input type="text" class="px-2 bg-gray-200 w-3/12 rounded-md" id="rhombus-d1"> cm <input type="text" class="px-3 bg-gray-200 rounded-md w-3/12" id="rhombus-d2"> cm</p>
                     <button class="py-2 px-10 my-3 bg-cyan-600 text-white rounded-md" id="rhombus-calculate-btn">Calculate</button>
                 </div>
                 <div class="card border-gray-200 border-4 rounded-md p-5 text-center">
                     <img src="./images/pentagon.png" alt="">
-                    <p class="text-2xl text-center font-bold my-2">Pentagon</p>
+                    <p class="text-2xl text-center font-bold my-2" id="pentagon-title">Pentagon</p>
                     <p>Area (A) = 0.5 x p x b</p>
                     <p class="my-2"><input type="text" class="px-2 bg-gray-200 w-3/12 rounded-md" placeholder="p" id="pentagon-p"> cm <input type="text" placeholder="b" class="px-3 bg-gray-200 rounded-md w-3/12" id="pentagon-b"> cm</p>
                     <button class="py-2 px-10 my-3 bg-cyan-600 text-white rounded-md" id="pentagon-calculate-btn">Calculate</button>
                 </div>
                 <div class="card border-gray-200 border-4 rounded-md p-5 text-center">
                     <img src="./images/ellipse.png" alt="">
-                    <p class="text-2xl text-center font-bold my-2">Ellipse</p>
+                    <p class="text-2xl text-center font-bold my-2" id="ellipse-title">Ellipse</p>
                     <p>Area (A) = <span>&#8508;</span>ab</p>
                     <p class="my-2"><input type="text" class="px-2 bg-gray-200 w-3/12 rounded-md" placeholder="a" id="ellipse-a"> cm <input type="text" placeholder="b" class="px-3 bg-gray-200 rounded-md w-3/12" id="ellipse-b"> cm</p>
                     <button class="py-2 px-10 my-3 bg-cyan-600 text-white rounded-md" id="ellipse-calculate-btn">Calculate</button>
                 </div>
             </div>
             <div class="calculate border-lime-400 border-4 rounded-md p-5 ml-3 text-center justify-end ">
-                <p class="font-bold text-2xl underline">Area Calculation</p>
-                <p id="triangle-area"></p>
-                <p id="rectangle-area"></p>
-                <p id="perallelogram-area"></p>
-                <p id="rhombus-area"></p>
-                <p id="pentagon-area"></p>
-                <p id="ellipse-area"></p>
-                <button class="hidden p-2 my-3 bg-cyan-600 text-white rounded-md" id="area-btn">conv m <sup>2</sup></button>
+                <h1 class="text-xl underline font-bold text-center pt-6 mb-7">Area Calculation</h1>
+                <ol id="ordered-list" class="px-10">
+
+                </ol>
             </div>
         </section>
     </main>
-    <script>
-        function getValueById(elementId){
-            const element = document.getElementById(elementId);
-            const elementValue = parseFloat(element.value);
 
-            return elementValue;
-        }
+    <script src="/aria-calculation.js"></script>
 
-        function alertMassege(input1, input2){
-            if(input1 <= 0 || input2 <= 0){
-                alert('Positive numbers only')
-            }
-        }
-
-        function AddEventListener(btnId){
-            const calculateBtnId = document.getElementById(btnId);
-            return calculateBtnId;
-        }
-
-        const triangleCalculateBtn = AddEventListener('triangle-calculate-btn');
-        const rectangleCalculateBtn = AddEventListener('rectangle-calculate-btn');
-        const perallelogramCalculateBtn = AddEventListener('perallelogram-calculate-btn');
-        const rhombusCalculateBtn  = AddEventListener('rhombus-calculate-btn');
-        const pentagonCalculateBtn = AddEventListener('pentagon-calculate-btn');
-        const ellipseCalculateBtn = AddEventListener('ellipse-calculate-btn');
-
-        triangleCalculateBtn.addEventListener('click', function(){
-            const triangleB = getValueById('triangle-b');
-            const triangleH = getValueById('triangle-h');
-            const triangleArea = document.getElementById('triangle-area');
-            const triangleAreaCalculate = triangleB * triangleH * 0.5;
-            alertMassege(triangleB,triangleH);
-            triangleArea.innerText ='Triangle ' + triangleAreaCalculate.toFixed(2) + ' cm';
-        })
-        rectangleCalculateBtn.addEventListener('click', function(){   
-            const rectangleW = getValueById('rectangle-w');
-            const rectangleL = getValueById('rectangle-l');
-            const rectangleArea = document.getElementById('rectangle-area');
-            const rectangleAreaCalculate = rectangleW * rectangleL;
-            alertMassege(rectangleW, rectangleL);
-            rectangleArea.innerText = 'Rectangle ' + rectangleAreaCalculate.toFixed(2) + ' cm';
-        })
-        perallelogramCalculateBtn.addEventListener('click', function(){
-            const perallelogramB = getValueById('perallelogram-b');
-            const perallelogramH = getValueById('perallelogram-h');
-            const perallelogramArea = document.getElementById('perallelogram-area');
-            const perallelogramAreaCalculate = perallelogramB * perallelogramH;
-            alertMassege(perallelogramB, perallelogramH);
-            perallelogramArea.innerText = 'Perallelogram ' + perallelogramAreaCalculate.toFixed(2) + ' cm'
-        })
-        rhombusCalculateBtn.addEventListener('click', function(){
-            const rhombusD1 = getValueById('rhombus-d1');
-            const rhombusD2 = getValueById('rhombus-d2');
-            const rhombusArea = document.getElementById('rhombus-area');
-            const rhombusAreaCalculate = rhombusD1 * rhombusD2 * 0.5;
-            alertMassege(rhombusD1, rhombusD2);
-            rhombusArea.innerText = 'Rhombus ' + rhombusAreaCalculate.toFixed(2) + ' cm';
-        })
-        pentagonCalculateBtn.addEventListener('click', function(){
-            const pentagonP = getValueById('pentagon-p');
-            const pentagonB = getValueById('pentagon-b');
-            const pentagonArea = document.getElementById('pentagon-area');
-            const pentagonAreaCalculate = pentagonB * pentagonP * 0.5;
-            alertMassege(pentagonB,pentagonP);
-            pentagonArea.innerText = 'Pentagon ' + pentagonAreaCalculate.toFixed(2) + ' cm';
-        })
-        ellipseCalculateBtn.addEventListener('click', function(){
-            const ellipseA = getValueById('ellipse-a');
-            const ellipseB = getValueById('ellipse-b');
-            const ellipseArea = document.getElementById('ellipse-area');
-            const ellipseAreaCalculate = 3.14 * ellipseA * ellipseB;
-            alertMassege(ellipseA, ellipseB)
-            ellipseArea.innerText = 'Ellipse ' + ellipseAreaCalculate.toFixed(2) + ' cm';
-        })
-    </script>
 </body>
 </html>
 
