@@ -17,7 +17,6 @@ function displayResult(id, title, result) {
         <button class="bg-blue-600 px-2 py-1 text-white rounded-md hover:bg-blue-400">Covert to m<sup>2</sup>
         </button>
     </div>
-    
     `
     parentElement.appendChild(createdElement);
 }
@@ -104,3 +103,23 @@ document.getElementById('ellipse-calculate-btn').addEventListener('click', funct
     const result = parseFloat((Math.PI * a * b).toFixed(2));
     displayResult('ordered-list', cardTitle, result)
 })
+
+
+
+// for (let i = 1; i <= 6; i++) {
+//     document.getElementById('card-id-' + i).addEventListener('mouseenter', function () {
+//       const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+//       this.style.background = "#" + randomColor;
+//     });
+//   }
+  
+for (let i = 1; i <= 6; i++) {
+    document.getElementById('card-id-' + i).addEventListener('mouseenter', function () {
+      const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+      this.style.background = "#" + randomColor;
+    });
+    document.getElementById('card-id-' + i).addEventListener('mouseleave', function () {
+      this.style.background = "white";
+    });
+  }
+  
